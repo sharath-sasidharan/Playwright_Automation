@@ -17,7 +17,7 @@
 <b>npx playwright test HomePage.spec.js --project=chromium --headed --debug</b>
 
 
-# Locating Elements in playright
+# Locating Elements in playwright
 
 <h2>3 Ways : </h2>
 
