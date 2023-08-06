@@ -1,7 +1,8 @@
 # Playwright_Automation Scripts 🎭
 
 <h2> npx playwright test</h2>
-<b>Execute all the tests on all the browsers in the headless mode</b>
+
+<b>Execute all the tests on all the browsers in the `headless mode`</b>
 
 <h2>Runs a specific test file : myTest.spec.js</h2>
 
