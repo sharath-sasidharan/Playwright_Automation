@@ -4,17 +4,17 @@
 <b>Execute all the tests on all the browsers in the headless mode</b>
 
 # Runs a specific test file : myTest.spec.js
-<b>npx playwright test HomePage.spec.js --headed</b>
+<b>`npx playwright test HomePage.spec.js --headed`</b>
 
 
 # Execute this test case only on chrome by using --project=chromium
-<b>npx playwright test HomePage.spec.js --project=chromium</b> 
+<b>`npx playwright test HomePage.spec.js --project=chromium`</b> 
 
 # Execute the test case in the headed mode
-<b>npx playwright test HomePage.spec.js --headed</b>
+<b>`npx playwright test HomePage.spec.js --headed`</b>
 
 # Execute test cases in debug mode by this it will open `playwright inspector` along with `browser`
-<b>npx playwright test HomePage.spec.js --project=chromium --headed --debug</b>
+<b>`npx playwright test HomePage.spec.js --project=chromium --headed --debug`</b>
 
 
 # Locating Elements in playwright
@@ -29,14 +29,14 @@
 
 
 # Links/buttons use click() method
-<b>page.click("locator")<b>
+<b>`page.click("locator")`<b>
 
 # For Inputs and to pass the value to input field use fill() method
-<b>page.fill("locator",value)<b>
+<b>`page.fill("locator",value)`<b>
 
 # Locate multiple web elements
 
-<b>const elements = await page.$$("locator")</b>
+<b>const elements = `await page.$$("locator")`</b>
 
 
 # Built-In locators 
@@ -49,6 +49,13 @@
 6. page.getByTitle() - to locate an element by its title attribute
 7. page.getByTestId()- to locate an element based on its data-testid attribute
 
+
+# Record scripts using Test Runner with <b>codegen</b>
+<b>`npx playwright codgen`</b> : this script will open the playwright inspector along with browser
+
+<h2> saves the generated script to a file</h2>
+
+<b> `npx playwright codgen -o tests/myTest.spec.js` </b> : saves the generated script to a file
 
 
 
