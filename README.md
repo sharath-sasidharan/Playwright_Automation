@@ -1,25 +1,27 @@
 # Playwright_Automation Scripts 🎭
 
-# npx playwright test
+<h2> npx playwright test</h2>
 <b>Execute all the tests on all the browsers in the headless mode</b>
 
-# Runs a specific test file : myTest.spec.js
+<h2>Runs a specific test file : myTest.spec.js</h2>
+
 <b>`npx playwright test HomePage.spec.js --headed`</b>
 
+<h2>Execute this test case only on chrome by using --project=chromium</h2>
 
-# Execute this test case only on chrome by using --project=chromium
 <b>`npx playwright test HomePage.spec.js --project=chromium`</b> 
 
-# Execute the test case in the headed mode
+<h2> Execute the test case in the headed mode</h2>
+
 <b>`npx playwright test HomePage.spec.js --headed`</b>
 
-# Execute test cases in debug mode by this it will open `playwright inspector` along with `browser`
+<h2>Execute test cases in debug mode by this it will open `playwright inspector` along with `browser`</h2>
+
 <b>`npx playwright test HomePage.spec.js --project=chromium --headed --debug`</b>
 
+<h2>Locating Elements in playwright</h2>
 
-# Locating Elements in playwright
-
-<h2>3 Ways : </h2>
+<h3>3 Ways : </h3>
 
 <ol>
   <li>Property</li>
@@ -28,18 +30,20 @@
 </ol>
 
 
-# Links/buttons use click() method
+<h2>Links/buttons use click() method </h2>
+  
 <b>`page.click("locator")`<b>
 
-# For Inputs and to pass the value to input field use fill() method
+<h2>For Inputs and to pass the value to input field use fill() method</h2> 
+
 <b>`page.fill("locator",value)`<b>
 
-# Locate multiple web elements
+<h2>Locate multiple web elements</h2> 
 
 <b>const elements = `await page.$$("locator")`</b>
 
 
-# Built-In locators 
+<h2>Built-In locators </h2> 
 
 1. page.getByAltText() - to locate an element, usually image, by its text alternative
 2. page.getByPlaceholder()- to locate an input by placeholder
@@ -50,13 +54,19 @@
 7. page.getByTestId()- to locate an element based on its data-testid attribute
 
 
-# Record scripts using Test Runner with <b>codegen</b>
+<h2> Record scripts using Test Runner with <b>codegen</b> </h2>
 <b>`npx playwright codgen`</b> : this script will open the playwright inspector along with browser
 
 <h2> saves the generated script to a file</h2>
 
 <b> `npx playwright codegen -o tests/myTest.spec.js` </b> : saves the generated script to a file
 
+<h2>Execute test scripts in specific device</h2>
 
+`npx playwright codegen --device 'Iphone SE'`
+
+<h2>Execute test scripts in certain viewport dimensions</h2>
+
+`npx playwright codegen --viewport-size "1280,720" `
 
 
