@@ -70,4 +70,24 @@
 
 `npx playwright codegen --viewport-size "1280,720" `
 
+<h1>Assertions has 2 types : Hard Assertions V/s Soft Assertions</h1>
+<h2>Hard Assertions : if fails it terminates the script won't execute further scripts</h2>
+
+1. `expect(page).toHaveURL()`             : Page has URL
+2. `expect(page).toHaveTitleL()`          : Page has title
+3. `expect(locator).toBeVisible()`        : Element is Visible
+4. `expect(locator).toBeEnabled()`        : Emenent is enabled
+5. `expect(locator).toBeDisabled()`       : Element is disabled
+6. `expect(locator).toBeChecked()`        : Radio/Checkbox is checked
+7. `expect(locator).toHaveAttribute()`    : Element has attribute
+8. `expect(locator).toHaveText()`         : Element matched text
+9. `expect(locator).toContainText()`      : Element contains text
+10. `expect(locator).toHaveValue(value)`   : Input has a value
+11. `expect(locator).toHaveCount()`        : List of elements has given length
+
+
+
+
+
+
 
