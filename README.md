@@ -55,7 +55,7 @@
 
 <h2> saves the generated script to a file</h2>
 
-<b> `npx playwright codgen -o tests/myTest.spec.js` </b> : saves the generated script to a file
+<b> `npx playwright codegen -o tests/myTest.spec.js` </b> : saves the generated script to a file
 
 
 
