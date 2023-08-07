@@ -99,14 +99,17 @@
 
 
 <h2>1. check number of options in dropdown </h2>
-<b>await expect(await page.locator("#country_1665629257 option")).toHaveCount(249)</b> 
 
-<h2>Check number of options in dropdown</h2>
+<b>`await expect(await page.locator("#country_1665629257 option")).toHaveCount(249)`</b> 
+
+<h2>Check number of options in dropdown/ validate the length of the options in the dropdown</h2>
 <b>const options = await page.$$('#country_1665629257 option')</b>
 
+<b>`await expect(options.length).toBe('number')`</b>
 
 
-<h2>check presence of value in the dropdown [For eg. India is present in the dropdown or not]</h2>
+
+<h2>check presence of value/options in the dropdown [For eg. India is present in the dropdown or not]</h2>
 <b>const options__present = await page.locator('#country_1665629257').textContent()</b>
 
 //Assertions - <b>`await expect(options__present.includes('India')).toBeTruthy()`</b>
