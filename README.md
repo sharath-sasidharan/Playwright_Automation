@@ -109,3 +109,4 @@
 <h2>check presence of value in the dropdown [For eg. India is present in the dropdown or not]</h2>
 <b>const options__present = await page.locator('#country_1665629257').textContent()</b>
 
+//Assertions - <b>`await expect(options__present.includes('India')).toBeTruthy()`</b>
