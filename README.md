@@ -92,11 +92,20 @@
 
 <h2>Multiple ways to select the options from the dropdown</h2>
 
- ** 1.  await page.locator('#country_1665629257').selectOption({label: 'Afghanistan'})            : //label/  visible text**
+** 1.  await page.locator('#country_1665629257').selectOption({label: 'Afghanistan'})**            : //label/  visible text
 **  2.  await page.locator('#country_1665629257').selectOption('India')                           : //visible text
 **  3.  await page.locator('#country_1665629257').selectOption({value:"india"})                   : // by using value
 **  4. await page.locator('#country_1665629257').selectOption({index:2})                          : // by using index 
 
 
+<h2>1. check number of options in dropdown </h2>
+<b>await expect(await page.locator("#country_1665629257 option")).toHaveCount(249)</b> 
 
+<h2>Check number of options in dropdown</h2>
+<b>const options = await page.$$('#country_1665629257 option')</b>
+
+
+
+<h2>check presence of value in the dropdown [For eg. India is present in the dropdown or not]</h2>
+<b>const options__present = await page.locator('#country_1665629257').textContent()</b>
 
