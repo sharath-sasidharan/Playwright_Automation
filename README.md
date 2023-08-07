@@ -85,7 +85,9 @@
 10. `expect(locator).toHaveValue(value)`   : Input has a value
 11. `expect(locator).toHaveCount()`        : List of elements has given length
 
+<h2> Soft Assertions </h2>
 
+<b>`await expect.soft(page)`</b> 
 
 
 
