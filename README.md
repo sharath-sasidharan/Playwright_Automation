@@ -90,6 +90,13 @@
 <b>`await expect.soft(page)`</b> 
 
 
+<h2>Multiple ways to select the options from the dropdown</h2>
+
+ ** 1.  await page.locator('#country_1665629257').selectOption({label: 'Afghanistan'})            : //label/  visible text**
+**  2.  await page.locator('#country_1665629257').selectOption('India')                           : //visible text
+**  3.  await page.locator('#country_1665629257').selectOption({value:"india"})                   : // by using value
+**  4. await page.locator('#country_1665629257').selectOption({index:2})                          : // by using index 
+
 
 
 
