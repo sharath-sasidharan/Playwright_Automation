@@ -174,5 +174,58 @@ For `Prompt`
 
 ```2. So if we have multiple pages in our application we will create multiple page object classes also we have created a separate folder <b>Pages</b>  in that we will create multiple pages```
 
+### Pages 
 
 
+```
+exports.LoginPage = class LoginPage {
+  constructor(page) {
+    this.page = page;
+    this.login_menu_link = "//a[@id='login2']";
+    this.usernameInput = "//input[@id='loginusername']";
+    this.passwordInput = "//input[@id='loginpassword']";
+    this.loginBtn = "//button[normalize-space()='Log in']";
+  }
+
+  // Method to launch the application
+
+  async goToLoginPage() {
+    await this.page.goto("https://demoblaze.com/index.html");
+  }
+
+  //Method to Click on the Login link
+  async login() {
+    await this.page.locator(this.login_menu_link).click();
+  }
+
+  //Method to input the username and password
+
+  async addLoginDetails(username, password) {
+    await this.page.locator(this.usernameInput).fill(username);
+    await this.page.locator(this.passwordInput).fill(password);
+  }
+
+  // Method to click on the login button
+  async clickLoginButton() {
+    await this.page.locator(this.loginBtn).click();
+  }
+};
+
+```
+
+### pom.spec.js
+
+```
+mport { LoginPage } from "../pages/LoginPage";
+
+test("Page Object Model", async ({ page }) => {
+
+  //Login Page
+  const login = new LoginPage(page);
+  await login.goToLoginPage();
+  await login.login();
+  await login.addLoginDetails("test", "test");
+  await login.clickLoginButton();
+  await page.waitForTimeout(3000);
+
+```
