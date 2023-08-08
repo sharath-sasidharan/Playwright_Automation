@@ -168,7 +168,11 @@ For `Prompt`
 
 ```
     
+<h2>Page Object MODEL</h2>
 
+```1. <p>Page object model is a pattern or framework in which we will maintain all the page elements and methods in one class a separate class</p>```
+
+```2. So if we have multiple pages in our application we will create multiple page object classes also we have created a separate folder <b>Pages</b>  in that we will create multiple pages```
 
 
 
