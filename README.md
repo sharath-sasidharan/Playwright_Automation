@@ -125,7 +125,7 @@
 
 <p>Before clicking the event, we need to register the dialog </p>
 
-For alert()
+For `alert`
 
 **Enabling Dialog window handler**
 
@@ -135,6 +135,31 @@ For alert()
         await dialog.accept() // close by using OK button
 
     })
+
+
+For `Confirm`
+
+```
+page.on("dialog", async dialog =>{
+        await expect(dialog.type()).toContain("confirm")
+        await expect (dialog.message()).toContain("Press a button!")
+        // await dialog.accept() // close by using OK button
+        await dialog.dismiss() // close by using Cancel button
+    })
+```
+
+For `Prompt`
+
+```
+ page.on("dialog", async dialog =>{
+        await expect(dialog.type()).toContain("prompt")
+        await expect (dialog.message()).toContain("Please enter your name:")
+        await expect(dialog.defaultValue()).toContain("Harry Potter")
+        await dialog.accept('Sarath') // close by using OK button
+    })
+
+```
+    
 
 
 
