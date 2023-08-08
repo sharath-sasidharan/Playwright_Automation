@@ -113,3 +113,29 @@
 <b>const options__present = await page.locator('#country_1665629257').textContent()</b>
 
 //Assertions - <b>`await expect(options__present.includes('India')).toBeTruthy()`</b>
+
+
+
+
+<h2>Dialogs :</h2>
+
+<p>Basically there are 3 types of Alerts  : Playwright can interact with the web page dialogs such as alert, confirm, prompt confirmation. </p>
+<p>dialogs are auto-dismissed by Playwright, so you don't have to handle them. However, you can register a dialog handler before the action that triggers the dialog to either dialog.accept() or dialog.dismiss() it</p>
+
+
+<p>Before clicking the event, we need to register the dialog </p>
+
+For alert()
+
+**Enabling Dialog window handler**
+
+     page.on("dialog", async dialog =>{
+        await expect(dialog.type()).toContain("alert")
+        await expect (dialog.message()).toContain("I am an alert box!")
+        await dialog.accept() // close by using OK button
+
+    })
+
+
+
+
