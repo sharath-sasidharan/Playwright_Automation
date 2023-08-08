@@ -128,35 +128,43 @@
 For `alert`
 
 **Enabling Dialog window handler**
-
+```
      page.on("dialog", async dialog =>{
         await expect(dialog.type()).toContain("alert")
         await expect (dialog.message()).toContain("I am an alert box!")
         await dialog.accept() // close by using OK button
-
     })
+
+//Click the event
+await page.click("//button[normalize-space()='Alert']")
 
 
 For `Confirm`
 
-```
+
 page.on("dialog", async dialog =>{
         await expect(dialog.type()).toContain("confirm")
         await expect (dialog.message()).toContain("Press a button!")
         // await dialog.accept() // close by using OK button
         await dialog.dismiss() // close by using Cancel button
     })
-```
+
+//Click the event
+    await page.locator("//button[normalize-space()='Confirm Box']").click()
+
 
 For `Prompt`
 
-```
+
  page.on("dialog", async dialog =>{
         await expect(dialog.type()).toContain("prompt")
         await expect (dialog.message()).toContain("Please enter your name:")
         await expect(dialog.defaultValue()).toContain("Harry Potter")
         await dialog.accept('Sarath') // close by using OK button
     })
+
+//Click the event
+   await page.locator("//button[normalize-space()='Prompt']").click()
 
 ```
     
