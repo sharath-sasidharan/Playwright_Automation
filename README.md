@@ -258,6 +258,31 @@ test.describe("Group 1", () => {
   },
 ```
 
+<h2>Tagging</h2>
+
+<p>Sometimes you want to tag your tests as @fast or @slow and only run the tests that have the certain tag. We recommend that you use the --grep and --grep-invert command line flags for that:</p>
+
+```
+test("test 1@sanity", async ({ page }) => {
+  console.log("this is the test 1");
+});
+
+test("test 2@sanity", async ({ page }) => {
+  console.log("this is the test 2");
+});
+test("test 3@reg", async ({ page }) => {
+  console.log("this is the test 3");
+});
+test("test 4@sanity@reg", async ({ page }) => {
+  console.log("this is the test 4");
+});
+
+
+- npx playwright test --grep @sanity : will execute only sanity tags
+- npx playwright test --grep @sanity : will execute only reg tags
+- npx playwright test --grep @sanity@reg : will execute only sanity & reg tags
+ - npx playwright test --grep @sanity --grep-invert @reg : will execute only sanity tags and ignore @reg tags
+```
 
 
 
