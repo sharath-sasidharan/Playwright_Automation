@@ -250,13 +250,19 @@ test.describe("Group 1", () => {
 ```
 
 <h2>Record Videos of execution of test scripts</h2>
-<p>For this changes need to be done in config file </p>
+<p>For this changes need to be done in config file, it will create directory named test-results based on value set to video key in config file, there are mainly 3 options - on/ off/ retain-on-failure  </p>
 
 ```
   use: {
     video: "retain-on-failure",
   },
 ```
+
+
+
+
+
+
 
 
 
