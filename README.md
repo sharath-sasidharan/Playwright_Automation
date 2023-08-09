@@ -245,6 +245,20 @@ test.describe("Group 1", () => {
   test("test 2", async ({ page }) => {
     console.log("this is the test 2");
   });
-});
+})
 
 ```
+
+<h2>Record Videos of execution of test scripts</h2>
+<p>For this changes need to be done in config file </p>
+
+```
+  use: {
+    video: "retain-on-failure",
+  },
+```
+
+
+
+
+
