@@ -229,3 +229,22 @@ test("Page Object Model", async ({ page }) => {
   await page.waitForTimeout(3000);
 
 ```
+
+
+
+
+<h2>Grouping Test : Describe block</h2>
+<p>Execute two test by grouping into one block using describe</p>
+
+```
+test.describe("Group 1", () => {
+  test("test 1", async ({ page }) => {
+    console.log("this is the test 1");
+  });
+
+  test("test 2", async ({ page }) => {
+    console.log("this is the test 2");
+  });
+});
+
+```
