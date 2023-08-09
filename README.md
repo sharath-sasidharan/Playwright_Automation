@@ -216,7 +216,7 @@ exports.LoginPage = class LoginPage {
 ### pom.spec.js
 
 ```
-mport { LoginPage } from "../pages/LoginPage";
+import { LoginPage } from "../pages/LoginPage";
 
 test("Page Object Model", async ({ page }) => {
 
