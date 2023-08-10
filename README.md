@@ -285,6 +285,16 @@ test("test 4@sanity@reg", async ({ page }) => {
 ```
 
 
+<h1>Hooks</h1>
+<p>playwright provides 4 types of Hooks : beforeEach()/ afterEach()/ beforeAll/ afterAll()</p>
+
+1. beforeEach() - it will execute multiple times before each individual test
+2. afterEach()  -  it will execute multiple times after each individual test
+3. beforeAll()  -  it will execute once before starting all test
+4. afterAll()   -    it will execute once after completion all test
+<p> It won't accept page fixture but if you want to create page instance we have to get first browser fixture from that browser we have to create a page fixture</p>
+
+
 
 
 
