@@ -288,18 +288,40 @@ test("test 4@sanity@reg", async ({ page }) => {
 <h1>Hooks</h1>
 <p>playwright provides 4 types of Hooks : beforeEach()/ afterEach()/ beforeAll/ afterAll()</p>
 
+```
 1. beforeEach() - it will execute multiple times before each individual test
 2. afterEach()  -  it will execute multiple times after each individual test
 3. beforeAll()  -  it will execute once before starting all test
 4. afterAll()   -    it will execute once after completion all test
+```
 <p> It won't accept page fixture but if you want to create page instance we have to get first browser fixture from that browser we have to create a page fixture</p>
 
+<h1>Reporters</h1>
 
+```
+<p>Playwright provides some built-in reporters </p>
 
+1. Line
+2. dot
+3. html
+4. json
+5. junit
 
+<p> 2 options can use this above options to be seen</p>
+In playwright config.js file
 
+reporter : 'dot/html/line' --anyone
+reporter : [["json",outputFile:"results.json"]]
 
+// multiple reporters to be generate
+reporter:[["html"],["dot"],["line"],["json",outputFile:"results.json"],["junit",outputFile:"results.xml"]]
 
+OR
+
+// Using command line Interface
+
+--reporter='html'
+```
 
 
 
