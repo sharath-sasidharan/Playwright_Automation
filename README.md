@@ -329,11 +329,48 @@ OR
 <p>HTTP REQUETS : GET| POST | PUT | DELETE</p>
 <p>we can use request fixture</p>
 
+let userId; // Global variable so that we can access it
+
+# Request : GET
 test("Get", async({request})=>{
 const response = await request.get(URL) // Returns Json()
 
 //Assertion
 expect(response.status())toBe(200)
+}
+
+# Request : POST
+test("POST", async({request})=>{
+const response = await request.POST(URL,{
+data:{"name":"abc"}
+}) // Returns Json()
+
+const res = await response.json()
+userId = res.id
+
+//Assertion
+expect(response.status())toBe(201)
+
+}
+
+# Request : PUT
+
+test("PUT", async({request})=>{
+const response = await request.PUT(URL,{
+data:{"name":"XYZ"}
+}) // Returns Json()
+
+//Assertion
+expect(response.status())toBe(200)
+
+}
+
+# Request : DELETE
+test("DELETE", async({request})=>{
+const response = await request.DELETE(URL)// Returns Json()
+
+//Assertion
+expect(response.status())toBe(204)
 }
 
 ```
