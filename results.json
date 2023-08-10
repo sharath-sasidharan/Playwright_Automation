@@ -3,7 +3,7 @@
     "configFile": "C:\\Users\\SARATH\\OneDrive\\Desktop\\Playwright_Automation\\playwright.config.js",
     "rootDir": "C:/Users/SARATH/OneDrive/Desktop/Playwright_Automation/tests",
     "forbidOnly": false,
-    "fullyParallel": true,
+    "fullyParallel": false,
     "globalSetup": null,
     "globalTeardown": null,
     "globalTimeout": 0,
@@ -11,8 +11,8 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 3,
-      "totalTime": 27038.064999997616
+      "actualWorkers": 1,
+      "totalTime": 15810.325999975204
     },
     "preserveOutput": "always",
     "reporter": [
@@ -95,13 +95,13 @@
   },
   "suites": [
     {
-      "title": "BuiltInReporters.spec.js",
-      "file": "BuiltInReporters.spec.js",
+      "title": "Hooks.spec.js",
+      "file": "Hooks.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Test1",
+          "title": "Home",
           "ok": true,
           "tags": [],
           "tests": [
@@ -115,85 +115,21 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 4574,
+                  "duration": 12710,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2023-08-10T17:22:27.203Z",
+                  "startTime": "2023-08-10T17:43:32.530Z",
                   "attachments": []
                 }
               ],
               "status": "expected"
             }
           ],
-          "id": "2123e62178b5118582d2-7f21d0f164a38990b01d",
-          "file": "BuiltInReporters.spec.js",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Test2",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 24852,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-08-10T17:22:27.228Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2123e62178b5118582d2-931c730f554a1eb5b69f",
-          "file": "BuiltInReporters.spec.js",
-          "line": 9,
-          "column": 1
-        },
-        {
-          "title": "Test3",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 6714,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2023-08-10T17:22:27.205Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "2123e62178b5118582d2-d13d4fb94871b9f16cc7",
-          "file": "BuiltInReporters.spec.js",
-          "line": 17,
+          "id": "ffb7caac4824eaecf60c-a7ed305b1368a3914dbb",
+          "file": "Hooks.spec.js",
+          "line": 19,
           "column": 1
         }
       ]
