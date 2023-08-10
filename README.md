@@ -323,5 +323,22 @@ OR
 --reporter='html'
 ```
 
+<h1>REST API Testing</h1>
+
+```
+<p>HTTP REQUETS : GET| POST | PUT | DELETE</p>
+<p>we can use request fixture</p>
+
+test("Get", async({request})=>{
+const response = await request.get(URL) // Returns Json()
+
+//Assertion
+expect(response.status())toBe(200)
+}
+
+```
+
+
+
 
 
