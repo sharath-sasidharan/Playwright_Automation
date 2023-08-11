@@ -375,7 +375,9 @@ expect(response.status())toBe(204)
 
 ```
 
+<h2> Generate PDF in playwright</h2>
 
+```npx playwright pdf  https://demoblaze.com/  myFile.pdf ```
 
 
 
